@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://www.shutterstock.com/image-vector/cinema-motion-picture-film-projector-260nw-1268426137.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .top-bar {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-arrow {
+      cursor: pointer;
+      font-size: 18px;
+      color: white;
+      font-weight: bold;
+    }
+
+    #searchInput {
+      padding: 10px 15px;
+      font-size: 16px;
+      width: 300px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      background-color: #fff;
+      color: #333;
+      transition: box-shadow 0.3s ease;
+    }
+
+    #searchInput:focus {
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+
+    .movie-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 30px;
+    }
+
+    .movie-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      width: 180px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+
+    .movie-name {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <span class="back-arrow" onclick="goBack()">⬅ Back</span>
+    <input type="text" id="searchInput" placeholder="Search Telugu Movies...">
+  </div>
+
+  <div class="movie-gallery">
+    <!-- Original Movies -->
+    <div class="movie-card">
+      <a href="details.html?movie=War&theater=PVR Cinemas&city=Hyderabad&cost=180">
+        <img src="https://images.filmibeat.com/img/220x275/popcorn/movie_posters/salaar-part-2-shouryanga-parvam-20240125082928-3618.jpg" alt="War">
+        <p class="movie-name">War</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=Pushpa 2&theater=INOX&city=Vizag&cost=200">
+        <img src="https://m.media-amazon.com/images/M/MV5BZjllNTdiM2QtYjQ0Ni00ZGM1LWFlYmUtNWY0YjMzYWIxOTYxXkEyXkFqcGc@._V1_.jpg" alt="Pushpa2">
+        <p class="movie-name">Pushpa2</p>
+      </a> 
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=Hanuman&theater=ICinemas&city=Nellore&cost=250">
+        <img src="https://img.etimg.com/thumb/width-420,height-315,imgsize-112166,resizemode-75,msid-106888809/news/new-updates/director-prasanth-varmas-hanuman-a-culturally-rooted-indian-superhero-film-hits-cinemas-today/hanumandb.jpg" alt="Hanuman">
+        <p class="movie-name">Hanuman</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=Rabhasa&theater=Latha&city=Kavali&cost=300">
+        <img src="https://media-cache.cinematerial.com/p/500x/miq59ola/rabhasa-indian-movie-poster.jpg?v=1537177146" alt="Rabhasa">
+        <p class="movie-name">Rabhasa</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=Radhe Shyam&theater=Cinemas&city=Chennai&cost=400">
+        <img src="https://images.fandango.com/ImageRenderer/820/0/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/226524/Radhe_Shyam-v1.jpg" alt="Radhe Shyam">
+        <p class="movie-name">Radhe Shyam</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=Devara&theater=INOX&city=Vizag&cost=500">
+        <img src="https://i.pinimg.com/736x/7a/c5/2d/7ac52d8f6a4af4f66390516e475e474c.jpg" alt="Devara">
+        <p class="movie-name">Devara</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=RRR&theater=MovieTime&city=Hyd&cost=300">
+        <img src="https://chennaivision.com/tamil-movies/wp-content/uploads/2021/07/RRR_LYCA_Insta.jpg" alt="RRR">
+        <p class="movie-name">RRR</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=Rajasaab&theater=MM&city=Kavali&cost=100">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOntgrv1fmiVTrxOEGS46GF5gfwVofJ13qFA&s" alt="Rajasaab">
+        <p class="movie-name">Rajasaab</p>
+      </a>
+    </div>
+    <div class="movie-card">
+      <a href="details.html?movie=Attarintiki Daredi&theater=INOX&city=Hyd&cost=200">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Attarintiki_Daredi.jpg/250px-Attarintiki_Daredi.jpg" alt="Attarintiki Daredi">
+        <p class="movie-name">Attarintiki Daredi</p>
+      </a>
+    </div>
+
+    <!-- NEW MOVIES -->
+    <div class="movie-card">
+      <a href="details.html?movie=Darling&theater=Asian&city=Hyderabad&cost=220">
+        <img src="https://i.pinimg.com/736x/eb/dc/ae/ebdcaee04fb1aa30f6a854419367d982.jpg" alt="Darling">
+        <p class="movie-name">Darling</p>
+      </a>
+    </div>
+
+    <div class="movie-card">
+      <a href="details.html?movie=Kanam&theater=SriLakshmi&city=Nellore&cost=180">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-eItsNoaGoiwadoDvCVr-V0bK9vKMDPVX2g&s" alt="Kanam">
+        <p class="movie-name">Kanam</p>
+      </a>
+    </div>
+
+    <div class="movie-card">
+      <a href="details.html?movie=Kubera&theater=Ramana&city=Chennai&cost=280">
+        <img src="https://images.filmibeat.com/img/220x275/popcorn/movie_posters/kuberaa-20250527161310-20144.jpg" alt="Kubera">
+        <p class="movie-name">Kubera</p>
+      </a>
+    </div>
+
+    <div class="movie-card">
+      <a href="details.html?movie=Junior&theater=PVR&city=Vizag&cost=240">
+        <img src="https://images.filmibeat.com/img/popcorn/movie_posters/junior-20250716200238-21638.jpg" alt="Junior">
+        <p class="movie-name">Junior</p>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const movieCards = document.querySelectorAll(".movie-card");
+
+    searchInput.addEventListener("input", function () {
+      const query = searchInput.value.toLowerCase();
+      movieCards.forEach(function (card) {
+        const movieName = card.querySelector(".movie-name").textContent.toLowerCase();
+        card.style.display = movieName.includes(query) ? "block" : "none";
+      });
+    });
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>

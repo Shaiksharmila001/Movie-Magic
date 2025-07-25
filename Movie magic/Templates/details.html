@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.9)
+        ),
+        url('https://thumbs.dreamstime.com/b/cinema-movie-theater-object-sparkling-light-background-vector-illustration-93969051.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 40px 35px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      color: #FFD700;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    strong {
+      color: #ffad33;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.03);
+    }
+
+    .confirm-btn {
+      background: linear-gradient(135deg, #00c853, #43a047);
+      color: white;
+    }
+
+    .confirm-btn:hover {
+      background: linear-gradient(135deg, #00b347, #2e7d32);
+    }
+
+    .back-button {
+      background-color: #444;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .back-button:hover {
+      background-color: #666;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      p, button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="movieTitle">Movie Name</h2>
+    <p><strong>Theater:</strong> <span id="theaterName">Theater Name</span></p>
+    <p><strong>City:</strong> <span id="cityName">City Name</span></p>
+    <p><strong>Ticket Cost:</strong> ₹<span id="ticketCost">0</span></p>
+
+    <button class="back-button" onclick="goBack()">⬅ Back</button>
+    <br>
+    <button class="confirm-btn" onclick="goToSeats()">✅ Confirm</button>
+  </div>
+
+  <script>
+    // Get movie data from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const movie = urlParams.get("movie");
+    const theater = urlParams.get("theater");
+    const city = urlParams.get("city");
+    const cost = urlParams.get("cost");
+
+    // Fill data into page
+    document.getElementById("movieTitle").innerText = movie;
+    document.getElementById("theaterName").innerText = theater;
+    document.getElementById("cityName").innerText = city;
+    document.getElementById("ticketCost").innerText = cost;
+
+    function goBack() {
+      window.history.back();
+    }
+
+    function goToSeats() {
+      localStorage.setItem("ticketCost", cost); // Save movie cost
+      window.location.href = "seats.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You - Movie Magic</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+        url('https://wallpapercave.com/wp/uyeqTRM.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .thankyou-box {
+      background: rgba(0, 0, 0, 0.75);
+      padding: 50px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      max-width: 500px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #FFD700;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      background: linear-gradient(135deg, #00b894, #00cec9);
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #00cec9, #00b894);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 500px) {
+      .thankyou-box {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p, button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-box">
+    <h1>🎬 Thank You for using Movie Magic!</h1>
+    <p>We hope you enjoy your movie 🍿</p>
+    <button onclick="window.location.href='index.html'">Back to Home</button>
+  </div>
+</body>
+</html>

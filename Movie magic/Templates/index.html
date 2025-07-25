@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Magic</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+    body.homepage {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #ffffff;
+      height: 100vh;
+      background: url('https://t4.ftcdn.net/jpg/06/89/49/95/360_F_689499531_MeYeI1VVavgYQRzz0S3JxkQ9VxzgYZQh.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 50px 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff4b2b, #ff416c, #ffc371);
+  background-clip: text;                 
+  -webkit-background-clip: text;        
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  letter-spacing: 3px;
+}
+
+
+    .glow-bar {
+      width: 80px;
+      height: 5px;
+      background: #ff416c;
+      margin: 0 auto 30px;
+      border-radius: 3px;
+      box-shadow: 0 0 12px #ff416c;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #222, #444);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .buttons button:hover {
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff416c;
+    }
+  </style>
+</head>
+<body class="homepage">
+  <div class="container">
+    <h1>Movie Magic</h1>
+    <div class="glow-bar"></div>
+    <div class="buttons">
+      <button onclick="goToAccount()">Login</button>
+      <button onclick="goToAccount()">Sign In</button>
+    </div>
+  </div>
+
+  <script>
+    function goToAccount() {
+      window.location.href = "account.html";
+    }
+  </script>
+</body>
+</html>

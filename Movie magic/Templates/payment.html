@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)),
+        url("https://t4.ftcdn.net/jpg/09/34/11/83/360_F_934118310_72BGL38DsSyYmMhFD9XhGe6oFrVLTkcp.jpg") no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .payment-box {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 40px 50px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #FFD700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .payment-box p {
+      font-size: 22px;
+      margin: 20px 0;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 14px 28px;
+      font-size: 18px;
+      background: linear-gradient(135deg, #00c853, #00e676);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #00b347, #00d36f);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-box">
+    <h1>Payment</h1>
+    <p id="amount">Total Amount: Rs 0</p>
+    <button class="btn" onclick="payNow()">Pay with Google Pay</button>
+  </div>
+
+  <script>
+    window.onload = function () {
+      const totalCost = localStorage.getItem("totalCost") || 0;
+      document.getElementById("amount").innerText = `Total Amount: Rs ${totalCost}`;
+    };
+
+    function payNow() {
+      alert("Payment Successful! 🎉");
+      window.location.href = "success.html";
+    }
+  </script>
+</body>
+</html>
