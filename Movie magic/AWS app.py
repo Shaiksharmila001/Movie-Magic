@@ -8,7 +8,7 @@ AWS_REGION = 'us-east-1'
 USER_TABLE = 'moviemagic_users'
 BOOKING_TABLE = 'moviemagic_bookings'
 SERVICES_TABLE = 'moviemagic_services'  # <- Added services table
-SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:604665149129:moviemagic_Topic'
+SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:390844783785:BookingAlerts'
 
 # === Initialize Flask App ===
 app = Flask(__name__)
